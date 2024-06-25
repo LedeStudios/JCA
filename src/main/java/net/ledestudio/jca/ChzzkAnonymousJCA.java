@@ -26,7 +26,7 @@ public class ChzzkAnonymousJCA extends JCA {
             return Utils.getContentJson(
                     httpClient,
                     Utils.httpGetRequest(String.format(
-                            "%s/service/v1/channels/%s/live-detail", Constants.CHZZK_URL, id)).build()
+                            "%s/service/v2/channels/%s/live-detail", Constants.CHZZK_URL, id)).build()
             ).map(json -> gson.fromJson(json, ChzzkLiveDetail.class));
         } catch (IOException e) {
             JCALogger.warning("Unable to retrieve live broadcast information.", e);
@@ -40,7 +40,7 @@ public class ChzzkAnonymousJCA extends JCA {
             return Utils.getContentJson(
                     httpClient,
                     Utils.httpGetRequest(String.format(
-                            "%s/polling/v1/channels/%s/live-status", Constants.CHZZK_URL, id)).build()
+                            "%s/polling/v2/channels/%s/live-status", Constants.CHZZK_URL, id)).build()
             ).map(json -> gson.fromJson(json, ChzzkLiveStatus.class));
         } catch (IOException e) {
             JCALogger.warning("Unable to retrieve live broadcast information.", e);

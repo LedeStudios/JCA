@@ -31,11 +31,11 @@ public class ApiTest {
     @Test
     public void getLiveStatus() throws IOException {
         final Gson gson = new GsonBuilder().create();
-        final JCA jca = new JCABuilder().login(auth, session).build();
+        final JCA jca = new JCABuilder().build();
 
         Utils.getContentJson(
                 jca.getHttpClient(),
-                Utils.httpGetRequest(Constants.CHZZK_URL + "/polling/v1/channels/458f6ec20b034f49e0fc6d03921646d2/live-status").build()
+                Utils.httpGetRequest(Constants.CHZZK_URL + "/polling/v2/channels/458f6ec20b034f49e0fc6d03921646d2/live-status").build()
         ).ifPresent(json -> {
             System.out.println(gson.fromJson(json, ChzzkLiveStatus.class));
         });
@@ -44,11 +44,11 @@ public class ApiTest {
     @Test
     public void getLiveDetail() throws IOException {
         final Gson gson = new GsonBuilder().create();
-        final JCA jca = new JCABuilder().login(auth, session).build();
+        final JCA jca = new JCABuilder().build();
 
         Utils.getContentJson(
                 jca.getHttpClient(),
-                Utils.httpGetRequest(Constants.CHZZK_URL + "/service/v1/channels/458f6ec20b034f49e0fc6d03921646d2/live-detail").build()
+                Utils.httpGetRequest(Constants.CHZZK_URL + "/service/v2/channels/0a45999d15508669be8278cdb1e6654f/live-detail").build()
         ).ifPresent(json -> System.out.println(gson.fromJson(json, ChzzkLiveDetail.class)));
     }
 
