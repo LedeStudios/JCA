@@ -5,7 +5,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.ledestudios:JCA:{version}}'
+    implementation 'com.github.ledestudios:JCA:{version}'
 }
 ```
 
