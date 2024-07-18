@@ -11,6 +11,10 @@ public interface LiveDetail extends LiveStatus {
 
     @NotNull String getLiveImageUrl();
 
+    @NotNull String getLiveImageUrl720();
+
+    @NotNull String getLiveImageUrl1080();
+
     @NotNull String getDefaultThumbnailImageUrl();
 
     @NotNull Optional<LocalDateTime> getOpenDate();

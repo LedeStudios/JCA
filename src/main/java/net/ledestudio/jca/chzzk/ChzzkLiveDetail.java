@@ -27,6 +27,16 @@ public class ChzzkLiveDetail extends ChzzkLiveStatus implements LiveDetail {
     }
 
     @Override
+    public @NotNull String getLiveImageUrl720() {
+        return liveImageUrl.replace("{type}", "720");
+    }
+
+    @Override
+    public @NotNull String getLiveImageUrl1080() {
+        return liveImageUrl.replace("{type}", "1080");
+    }
+
+    @Override
     public @NotNull String getDefaultThumbnailImageUrl() {
         return defaultThumbnailImageUrl;
     }
@@ -61,7 +71,26 @@ public class ChzzkLiveDetail extends ChzzkLiveStatus implements LiveDetail {
                 ", openDate='" + openDate + '\'' +
                 ", closeDate='" + closeDate + '\'' +
                 ", channel=" + channel +
+                ", liveTitle='" + liveTitle + '\'' +
+                ", status='" + status + '\'' +
+                ", concurrentUserCount=" + concurrentUserCount +
+                ", accumulateCount=" + accumulateCount +
+                ", paidPromotion=" + paidPromotion +
+                ", adult=" + adult +
+                ", clipActive=" + clipActive +
+                ", chatChannelId='" + chatChannelId + '\'' +
+                ", tags=" + tags +
+                ", categoryType='" + categoryType + '\'' +
+                ", liveCategory='" + liveCategory + '\'' +
+                ", liveCategoryValue='" + liveCategoryValue + '\'' +
+                ", livePollingStatusJson='" + livePollingStatusJson + '\'' +
+                ", faultStatus=" + faultStatus +
+                ", userAdultStatus=" + userAdultStatus +
+                ", chatActive=" + chatActive +
+                ", chatAvailableGroup='" + chatAvailableGroup + '\'' +
+                ", chatAvailableCondition='" + chatAvailableCondition + '\'' +
+                ", minFollowerMinute=" + minFollowerMinute +
+                ", chatDonationRankingExposure=" + chatDonationRankingExposure +
                 '}';
     }
-
 }

@@ -7,26 +7,26 @@ import java.util.List;
 
 public class ChzzkLiveStatus implements LiveStatus {
 
-    private String liveTitle;
-    private String status;
-    private int concurrentUserCount;
-    private int accumulateCount;
-    private boolean paidPromotion;
-    private boolean adult;
-    private boolean clipActive;
-    private String chatChannelId;
-    private List<String> tags;
-    private String categoryType;
-    private String liveCategory;
-    private String liveCategoryValue;
-    private String livePollingStatusJson;
-    private Object faultStatus;
-    private Object userAdultStatus;
-    private boolean chatActive;
-    private String chatAvailableGroup;
-    private String chatAvailableCondition;
-    private int minFollowerMinute;
-    private boolean chatDonationRankingExposure;
+    protected String liveTitle;
+    protected String status;
+    protected int concurrentUserCount;
+    protected int accumulateCount;
+    protected boolean paidPromotion;
+    protected boolean adult;
+    protected boolean clipActive;
+    protected String chatChannelId;
+    protected List<String> tags;
+    protected String categoryType;
+    protected String liveCategory;
+    protected String liveCategoryValue;
+    protected String livePollingStatusJson;
+    protected Object faultStatus;
+    protected Object userAdultStatus;
+    protected boolean chatActive;
+    protected String chatAvailableGroup;
+    protected String chatAvailableCondition;
+    protected int minFollowerMinute;
+    protected boolean chatDonationRankingExposure;
 
     @Override
     public @NotNull String getTitle() {

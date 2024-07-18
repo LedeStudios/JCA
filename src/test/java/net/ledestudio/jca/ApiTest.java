@@ -35,7 +35,7 @@ public class ApiTest {
 
         Utils.getContentJson(
                 jca.getHttpClient(),
-                Utils.httpGetRequest(Constants.CHZZK_URL + "/polling/v2/channels/458f6ec20b034f49e0fc6d03921646d2/live-status").build()
+                Utils.httpGetRequest(Constants.CHZZK_URL + "/polling/v2/channels/75cbf189b3bb8f9f687d2aca0d0a382b/live-status").build()
         ).ifPresent(json -> {
             System.out.println(gson.fromJson(json, ChzzkLiveStatus.class));
         });
@@ -48,7 +48,7 @@ public class ApiTest {
 
         Utils.getContentJson(
                 jca.getHttpClient(),
-                Utils.httpGetRequest(Constants.CHZZK_URL + "/service/v2/channels/0a45999d15508669be8278cdb1e6654f/live-detail").build()
+                Utils.httpGetRequest(Constants.CHZZK_URL + "/service/v2/channels/75cbf189b3bb8f9f687d2aca0d0a382b/live-detail").build()
         ).ifPresent(json -> System.out.println(gson.fromJson(json, ChzzkLiveDetail.class)));
     }
 
